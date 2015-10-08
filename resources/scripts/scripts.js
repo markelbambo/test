@@ -1,5 +1,16 @@
+/*
+ *
+ *  FUNCTION NAME : loadProducts
+ *  AUTHOR        : Mark Anthony Elbambo
+ *  DATE          : October 14, 2015
+ *  MODIFIED BY   : 
+ *  REVISION DATE :
+ *  REVISION #    : 
+ *  DESCRIPTION   : main function for loading the products
+ *  PARAMETERS    : 
+ *
+ */
 function loadProducts(){
-	
 	//$.getJSON( "resources/scripts/products.json", function( json ) {
 		var json = { "ShopName": "Betica Shop", "Products": [ { "Category": [ { "Phone": [{	"name":"iPhone6",	"description":"Manufactured by Apple, to be released in 2015",	"price":"1000",	"imgsrc":"iphone6.jpeg"	},{	"name":"iPhone6 Plus",	"description":"Manufactured by Apple, to be released in 2015",	"price":"1000",	"imgsrc":"iphone6-plus.png"	},{	"name":"Galaxy S6",	"description":"Manufactured by Samsung, to be released in 2015",	"price":"1000",	"imgsrc":"galaxy-s6.jpg"	},{	"name":"Note 5",	"description":"Manufactured by Samsung, to be released in 2015",	"price":"1000",	"imgsrc":"note5.jpg"	} ], "Laptop": [{ "name":"Samsung",	"description":"Manufactured by Samsung, to be released in 2015",	"price":"1000",	"imgsrc":"samsung-laptop.jpeg" }] } ] } ] }
 		var category = json['Products'][0]['Category'];
@@ -13,6 +24,18 @@ function loadProducts(){
 	//});
 }
 
+/*
+ *
+ *  FUNCTION NAME : categoryCreator
+ *  AUTHOR        : Mark Anthony Elbambo
+ *  DATE          : October 14, 2015
+ *  MODIFIED BY   : 
+ *  REVISION DATE :
+ *  REVISION #    : 
+ *  DESCRIPTION   : function to create the category container
+ *  PARAMETERS    : 
+ *
+ */
 function categoryCreator(name){
 	var str = '<div id="category-'+name+'">';
 	str += '<div class="categBox-Header">'
@@ -20,7 +43,18 @@ function categoryCreator(name){
 	str += '</div></div>';
 	return str;
 }
-
+/*
+ *
+ *  FUNCTION NAME : productCreator
+ *  AUTHOR        : Mark Anthony Elbambo
+ *  DATE          : October 14, 2015
+ *  MODIFIED BY   : 
+ *  REVISION DATE :
+ *  REVISION #    : 
+ *  DESCRIPTION   :function to create the product inside the category
+ *  PARAMETERS    : 
+ *
+ */
 function productCreator(obj){
 	var str = "";
 	for(x in obj){
