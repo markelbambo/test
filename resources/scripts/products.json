@@ -1,0 +1,24 @@
+{
+  "ShopName": "Betica Shop",
+  "Products": [
+    {
+      "Category": [
+        {
+          "Phone": [{
+			"name":"iPhone6",
+			"description":"Manufactured by Apple, to be released in 2015",
+			"price":"1000"
+			},{
+            "name":"Samsung",
+			"description":"Manufactured by Samsung, to be released in 2015",
+			"price":"1000"
+			}
+          ],
+          "Laptop": [
+            "Samsung"
+          ]
+        }
+      ]
+    }
+  ]
+}
